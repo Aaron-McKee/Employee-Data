@@ -32,7 +32,7 @@ class Employee(db.Model):
     dept_code = db.Column(db.Text, db.ForeignKey('departments.dept_code'))
 
     dept = db.relationship('Department')
-    assignments = db.relationship('EmployeeProject', backref='employee')  #This does not work!
+    assignments = db.relationship('EmployeeProject', backref='employee') 
     
     projects = db.relationship('Project', secondary ='employee_projects', backref='employees')
 
@@ -44,7 +44,7 @@ class Project(db.Model):
     proj_code = db.Column(db.Text, primary_key=True)
     proj_name = db.Column(db.Text, nullable=False, unique=True)
 
-    assignments = db.relationship('EmployeeProject', backref='project')  #This does not work!
+    assignments = db.relationship('EmployeeProject', backref='project')  
 
     def __repr__(self):
         return f"<Project {self.proj_code} {self.proj_name}>"
