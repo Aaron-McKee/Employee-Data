@@ -21,6 +21,7 @@ summer = Employee(name="Summer Winter", state="OR", dept_code="mktg")
 joaquin = Employee(name="Joaquin Phoenix", state="CA", dept_code="acct")
 aaron = Employee(name="Aaron McKee", state="KY", dept_code="it")
 vincent = Employee(name="Vincent Ngondi", state="WA", dept_code="r&d")
+maggie = Employee(name= "Maggie Orozco", state="CA", dept_code="sales")
 
 #Add and Commit Departments and Employees
 db.session.add(d1)
